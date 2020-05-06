@@ -21,9 +21,9 @@ Route::post('authenticate', 'UsersController@authenticate');
 // Register
 Route::post('register', 'UsersController@register');
 
-Route::get('posts', 'PostController@index');
-Route::get('posts/index', 'PostController@index');
-Route::post('posts/add', 'PostController@add');
+// Route::get('posts', 'PostController@index');
+// Route::get('posts/index', 'PostController@index');
+// Route::post('posts/add', 'PostController@add');
 
 // Employee crud
 Route::get('employees', 'EmployeesController@index');
@@ -39,3 +39,9 @@ Route::delete('filedelete/{id}', 'EmployeesController@filedelete');
 
 // Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
+// Employee crud
+Route::get('houses', 'HousesController@index');
+Route::post('houses', 'HousesController@store');
+Route::get('houses/{id}', 'HousesController@show');
+Route::put('houses/{id}', 'HousesController@update');
+Route::delete('houses/{id}', 'HousesController@destroy');

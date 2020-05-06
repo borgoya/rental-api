@@ -16,14 +16,13 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('reg_no');
-            $table->string('v_type', 255);
+            $table->string('vehicle_type', 255);
             $table->string('model');
             $table->string('brand');
             $table->string('fuel_type');
             $table->string('rent_price');
             $table->string('mfd');
             $table->string('booking_status');
-            $table->string('fuel_type');
             $table->longText('description');
             $table->longText('img_link');
             $table->integer('owner_id')->unsigned(); // owner id is a foreign key
