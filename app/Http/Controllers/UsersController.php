@@ -40,6 +40,7 @@ class UsersController extends Controller {
             'name' => 'required',
             'email' => 'required | email | unique:users',
             'password' => 'required',
+            'img_link' => 'required'
         ]);
         if ($validator->fails()) {
             return response()->json(['status' => 'fail', 'message' => $validator->errors()->all()]);
@@ -48,6 +49,7 @@ class UsersController extends Controller {
                 'email' => $request->email,
                 'name' => $request->name,
                 'password' => bcrypt($request->password),
+                'img_link' => $request->img_link
             ]);
             return response()->json(array('status' => true, 'token' => JWTAuth::fromUser($user)), 200);
         }
