@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    API For CRUD
+                    Rental API- API for Rental Application
                 </div>
             </div>
         </div>
